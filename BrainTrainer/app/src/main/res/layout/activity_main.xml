@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageButton
+        android:id="@+id/ansImageButton1"
+        android:layout_width="159dp"
+        android:layout_height="141dp"
+        android:layout_marginStart="38dp"
+        android:layout_marginTop="162dp"
+        android:layout_marginEnd="7dp"
+        android:onClick="chooseAnswer"
+        android:visibility="invisible"
+        android:tag="0"
+        app:layout_constraintEnd_toStartOf="@+id/ansImageButton4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/blue" />
+
+
+    <ImageButton
+        android:id="@+id/ansImageButton2"
+        android:layout_width="159dp"
+        android:layout_height="141dp"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="49dp"
+        android:onClick="chooseAnswer"
+        android:visibility="invisible"
+        android:tag="3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ansImageButton3"
+        app:layout_constraintTop_toBottomOf="@+id/ansImageButton4"
+        app:srcCompat="@drawable/redq" />
+
+    <ImageButton
+        android:id="@+id/ansImageButton3"
+        android:layout_width="159dp"
+        android:layout_height="141dp"
+        android:layout_marginStart="38dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="7dp"
+        android:onClick="chooseAnswer"
+        android:visibility="invisible"
+        android:tag="2"
+        app:layout_constraintEnd_toStartOf="@+id/ansImageButton2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ansImageButton1"
+        app:srcCompat="@drawable/yellowq" />
+
+    <ImageButton
+        android:id="@+id/ansImageButton4"
+        android:layout_width="159dp"
+        android:layout_height="141dp"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="162dp"
+        android:layout_marginEnd="49dp"
+        android:onClick="chooseAnswer"
+        android:visibility="invisible"
+        android:tag="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ansImageButton1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/pink" />
+
+    <ImageButton
+        android:id="@+id/goImageButton"
+        android:layout_width="205dp"
+        android:layout_height="203dp"
+        android:onClick="clickGo"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/green" />
+
+
+    <TextView
+        android:id="@+id/goTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GO!"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/timerTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="33dp"
+        android:layout_marginEnd="26dp"
+        android:background="@android:color/holo_orange_dark"
+        android:padding="10sp"
+        android:text="00:30"
+        android:textColor="#000000"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toStartOf="@+id/sumTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/scoreTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="33dp"
+        android:layout_marginEnd="28dp"
+        android:background="@color/colorAccent"
+        android:padding="10sp"
+        android:text="0/0"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/sumTextView"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="invisible"/>
+
+    <TextView
+        android:id="@+id/sumTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="41dp"
+        android:layout_marginEnd="18dp"
+        android:padding="10dp"
+        android:text="5+7"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/scoreTextView"
+        app:layout_constraintStart_toEndOf="@+id/timerTextView"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="invisible"/>
+
+    <TextView
+        android:id="@+id/ansTextView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="14"
+        android:textSize="36sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/ansImageButton1"
+        app:layout_constraintEnd_toEndOf="@+id/ansImageButton1"
+        app:layout_constraintStart_toStartOf="@+id/ansImageButton1"
+        app:layout_constraintTop_toTopOf="@+id/ansImageButton1" />
+
+    <TextView
+        android:id="@+id/ansTextView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="14"
+        android:textSize="36sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/ansImageButton2"
+        app:layout_constraintEnd_toEndOf="@+id/ansImageButton4"
+        app:layout_constraintStart_toStartOf="@+id/ansImageButton4"
+        app:layout_constraintTop_toTopOf="@+id/ansImageButton4" />
+
+    <TextView
+        android:id="@+id/ansTextView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="14"
+        android:textSize="36sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/ansImageButton3"
+        app:layout_constraintEnd_toEndOf="@+id/ansImageButton3"
+        app:layout_constraintStart_toStartOf="@+id/ansImageButton3"
+        app:layout_constraintTop_toBottomOf="@+id/ansImageButton1"
+        tools:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/ansTextView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="12"
+        android:textSize="36sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/ansImageButton2"
+        app:layout_constraintEnd_toEndOf="@+id/ansImageButton2"
+        app:layout_constraintStart_toStartOf="@+id/ansImageButton2"
+        app:layout_constraintTop_toTopOf="@+id/ansImageButton2" />
+
+    <TextView
+        android:id="@+id/judgeTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="CORRECT :)"
+        android:textAlignment="center"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/sumTextView"
+        app:layout_constraintVertical_bias="0.8" />
+
+    <Button
+        android:id="@+id/playAgainButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="36dp"
+        android:onClick="playAgain"
+        android:text="PLAY AGAIN"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.472"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
